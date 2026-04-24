@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const btnBienvenida = document.getElementById("btn-bienvenida");
     if (btnBienvenida) {
         btnBienvenida.addEventListener("click", function() {
-            alert("¡Bienvenido al portafolio de Maria Jose!");
+            alert("¡Hola! Soy Maria Jose. ¡Bienvenido a mi portafolio profesional, estoy lista para aportar mi experiencia a tu equipo!");
         });
     }
 
@@ -32,6 +32,15 @@ document.addEventListener("DOMContentLoaded", function() {
                 contenidoDinamico.style.display = "none";
                 btnToggle.textContent = "Mostrar Contenido";
             }
+        });
+    }
+
+    // 4. Hamburger menu toggle
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('nav-links');
+    if (hamburger && navLinks) {
+        hamburger.addEventListener('click', function() {
+            navLinks.classList.toggle('show');
         });
     }
 
