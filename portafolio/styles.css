@@ -1,4 +1,4 @@
-/* Variables globales */
+/* Global variables */
 :root {
     --primary-color: #d81b60;
     --secondary-color: #880e4f;
@@ -10,7 +10,7 @@
     --base-font-size: 100%; /* 16px default */
 }
 
-/* Reset básico */
+/* Basic reset */
 * {
     margin: 0;
     padding: 0;
@@ -25,10 +25,13 @@ body {
     line-height: 1.6;
 }
 
-/* Navegación */
+/* Navigation - Using Flexbox */
 .navbar {
     background-color: var(--primary-color);
     padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .navbar ul {
@@ -45,7 +48,7 @@ body {
     font-size: 1.1rem;
 }
 
-/* Encabezado con imagen */
+/* Header with image */
 .hero {
     background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
                 url('https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80') center/cover;
@@ -69,7 +72,7 @@ body {
     letter-spacing: 0.3rem;
 }
 
-/* Botones agrupados */
+/* Grouped buttons */
 .btn, .badge {
     color: var(--text-light);
     border-radius: 0.25rem;
@@ -95,14 +98,19 @@ body {
     margin-top: 1rem;
 }
 
-/* Bloques de información */
+/* Information blocks (Projects) - Using Grid Layout */
 .info-blocks {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Escritorio: 3 columnas */
+    grid-template-columns: repeat(3, 1fr); /* Desktop: 3 columns */
+    grid-template-areas: "b1 b2 b3"; /* Optional grid-area experiment */
     background-color: var(--section-bg);
     padding: 3.75rem 1.25rem;
     gap: 1.875rem;
 }
+
+.block:nth-child(1) { grid-area: b1; }
+.block:nth-child(2) { grid-area: b2; }
+.block:nth-child(3) { grid-area: b3; }
 
 .block {
     padding: 1.25rem;
@@ -122,7 +130,7 @@ body {
     background-color: var(--secondary-color);
 }
 
-/* Contenedor y Galería */
+/* Container and Gallery */
 .container {
     max-width: 1200px;
     margin: auto;
@@ -137,22 +145,22 @@ body {
 
 .gallery {
     display: grid;
-    grid-template-columns: repeat(4, 1fr); /* Escritorio: 4 columnas para galería */
+    grid-template-columns: repeat(4, 1fr); /* Desktop: 4 columns for gallery */
     gap: 1.25rem;
     margin-top: 2.5rem;
 }
 
-/* Imágenes Responsivas */
+/* Responsive Images */
 .card img {
     max-width: 100%;
     height: auto;
     border-radius: 0.625rem;
     box-shadow: 0 10px 20px rgba(0,0,0,0.15);
     transition: transform 0.3s ease;
-    display: block; /* Elimina espacio inferior extra */
+    display: block; /* Removes extra bottom space */
 }
 
-/* Efectos de tarjeta */
+/* Card effects */
 .card-1 { transform: rotate(-3deg); }
 .card-2 { transform: translateY(-10px); }
 .card-3 { transform: rotate(3deg); }
@@ -161,7 +169,34 @@ body {
     transform: scale(1.05) rotate(0deg);
 }
 
-/* Resultado */
+/* Pet Gallery - Flexbox Layout */
+.pet-gallery-flex .flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    gap: 1.25rem;
+    margin-bottom: 2.5rem;
+}
+.pet-gallery-flex img {
+    max-width: 30%;
+    height: auto;
+    border-radius: 0.5rem;
+}
+
+/* Pet Gallery - Grid Layout */
+.pet-gallery-grid .grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.25rem;
+}
+.pet-gallery-grid img {
+    width: 100%;
+    height: auto;
+    border-radius: 0.5rem;
+}
+
+/* Result (Dynamic Projects) */
 .resultado {
     margin-top: 3rem;
     padding: 2rem;
@@ -180,36 +215,44 @@ body {
 
 /* ====== MEDIA QUERIES ====== */
 
-/* Tablets (pantallas medianas) */
+/* Tablets (medium screens) */
 @media (max-width: 1024px) {
     .info-blocks {
-        grid-template-columns: repeat(2, 1fr); /* 2 columnas */
+        grid-template-columns: repeat(2, 1fr); /* 2 columns */
+        grid-template-areas: "b1 b2" "b3 b3";
     }
     .gallery {
-        grid-template-columns: repeat(3, 1fr); /* 3 columnas */
+        grid-template-columns: repeat(3, 1fr); /* 3 columns */
     }
     .hero h1 { 
         font-size: 2.5rem; 
     }
 }
 
-/* Móviles (pantallas pequeñas) */
+/* Mobile (small screens) */
 @media (max-width: 768px) {
     .navbar ul {
-        flex-direction: column; /* Menú a columna */
+        flex-direction: column; /* Menu in column */
         align-items: center;
         gap: 1rem;
     }
     .info-blocks {
-        grid-template-columns: 1fr; /* 1 columna */
+        grid-template-columns: 1fr; /* 1 column */
+        grid-template-areas: "b1" "b2" "b3";
     }
     .gallery {
-        grid-template-columns: repeat(2, 1fr); /* 2 columnas */
+        grid-template-columns: repeat(2, 1fr); /* 2 columns */
+    }
+    .pet-gallery-flex img {
+        max-width: 100%; /* Adjust for mobile */
+    }
+    .pet-gallery-grid .grid-container {
+        grid-template-columns: 1fr; /* 1 column for grid on mobile */
     }
     .hero h1 { 
         font-size: 2rem; 
     }
     .card { 
-        transform: none !important; /* Quitar rotación para diseño más limpio */
+        transform: none !important; /* Remove rotation for cleaner design */
     }
 }

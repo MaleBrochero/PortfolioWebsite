@@ -1,8 +1,8 @@
-// Tarea 5: JavaScript - Agregando interactividad
+// Task 5: JavaScript - Adding interactivity
 
 document.addEventListener("DOMContentLoaded", function() {
     
-    // 1. Mostrar un mensaje de bienvenida en pantalla
+    // 1. Show a welcome message on the screen
     const btnBienvenida = document.getElementById("btn-bienvenida");
     if (btnBienvenida) {
         btnBienvenida.addEventListener("click", function() {
@@ -10,17 +10,17 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     }
 
-    // 2. Cambiar el texto de un párrafo al hacer clic en un botón
+    // 2. Change paragraph text on button click
     const btnCambiarTexto = document.getElementById("btn-cambiar-texto");
     const textoCambiante = document.getElementById("texto-cambiante");
     if (btnCambiarTexto && textoCambiante) {
         btnCambiarTexto.addEventListener("click", function() {
             textoCambiante.textContent = "¡Me apasiona aplicar mis conocimientos en mecatrónica para resolver problemas complejos y aportar valor en cada proyecto en el que participo!";
-            btnCambiarTexto.style.display = "none"; // Ocultar el botón después de leer
+            btnCambiarTexto.style.display = "none"; // Hide the button after reading
         });
     }
 
-    // 3. Efecto dinámico (mostrar/ocultar contenido)
+    // 3. Dynamic effect (show/hide content)
     const btnToggle = document.getElementById("btn-toggle");
     const contenidoDinamico = document.getElementById("contenido-dinamico");
     if (btnToggle && contenidoDinamico) {
