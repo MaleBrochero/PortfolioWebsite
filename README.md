@@ -25,18 +25,22 @@ The project is organized in a clean and scalable structure:
 ```text
 PortfolioWebsite/
 │
-├── public/
-│   └── img/
-│       └── FotoM.webp        # Assets and profile pictures
+├── index.html                # Main entry point (Hero, Profile, Education, Dynamic Projects)
+├── README.md                 # Project documentation
 │
-├── portafolio/
-│   ├── index.html            # Main entry point (Hero, Profile, Education, Dynamic Projects)
-│   ├── mascotas.html         # Pet Gallery page (Flexbox and Grid examples)
-│   ├── styles.css            # Main stylesheet (Variables, Flexbox/Grid, Animations)
-│   ├── style.min.css         # Minified stylesheet for production
-│   └── script.js             # Interactivity (DOM manipulation, event listeners)
-│
-└── README.md                 # Project documentation
+└── src/
+    ├── public/
+    │   └── img/
+    │       └── FotoM.webp    # Assets and profile pictures
+    │
+    ├── css/
+    │   ├── styles.css        # Main stylesheet (Variables, Flexbox/Grid, Animations)
+    │   └── style.min.css     # Minified stylesheet for production
+    │
+    ├── script.js             # Interactivity (DOM manipulation, event listeners)
+    │
+    └── pages/
+        └── mascotas.html     # Pet Gallery page (Flexbox and Grid examples)
 ```
 
 ---
@@ -70,7 +74,7 @@ Since this project is built with base web technologies (HTML, CSS, JS), it does 
 
 2. **Navigate to the project directory:**
    ```bash
-   cd portfolio-mariajose/portafolio
+   cd portfolio-mariajose
    ```
 
 3. **Configure the environment (Optional):**
