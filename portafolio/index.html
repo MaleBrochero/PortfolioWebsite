@@ -3,52 +3,72 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Portafolio Personal</title>
+    <title>Portafolio - Maria Jose</title>
     <!-- Aquí conectamos el archivo CSS -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
+    <!-- Navegación -->
+    <nav class="navbar">
+        <ul>
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#perfil">Perfil</a></li>
+            <li><a href="#proyectos">Proyectos</a></li>
+            <li><a href="#galeria">Galería</a></li>
+        </ul>
+    </nav>
+
     <!-- Sección Hero (Cabecera) -->
-    <header class="hero">
+    <header id="inicio" class="hero">
         <div class="hero-content">
-            <h1>CAREN TUPEN</h1>
+            <h1>MARIA JOSE</h1>
             <p>PORTAFOLIO PROFESIONAL</p>
+            <button id="btn-bienvenida" class="btn">Mostrar Bienvenida</button>
         </div>
     </header>
 
     <!-- Sección de Información en Columnas -->
-    <section class="info-blocks">
+    <section id="perfil" class="info-blocks">
         <div class="block">
             <span class="badge">Contexto</span>
-            <p>Breve descripción sobre quién eres y tu trayectoria profesional en el sector.</p>
+            <p>Mecatrónica, con experiencia en automatización, telecomunicaciones, mantenimiento industrial y sistemas de control.</p>
         </div>
         <div class="block">
-            <span class="badge">Problema</span>
-            <p>Qué desafíos identificaste y cómo decidiste abordarlos con tu marca.</p>
+            <span class="badge">Propósito</span>
+            <p id="texto-cambiante">Me caracterizo por ser una persona proactiva, resiliente y orientada a la mejora continua.</p>
+            <button id="btn-cambiar-texto" class="btn btn-small">Ver Más</button>
         </div>
         <div class="block">
-            <span class="badge highlight">Rol</span>
-            <p>Tu función principal: Coaching, asesoría y liderazgo integral para clientes.</p>
+            <span class="badge highlight">Objetivo</span>
+            <p>Especializarme en el análisis y uso estratégico de datos para la optimización de sistemas y la innovación industrial.</p>
         </div>
     </section>
 
     <!-- Sección de Galería (Identidad Visual) -->
     <main class="container">
-        <section class="identidad">
-            <h2>Identidad Visual</h2>
+        <section id="galeria" class="identidad">
+            <h2>Galería de Animales</h2>
             <div class="gallery">
-                <div class="card card-1"><img src="https://placeholder.com" alt="Post 1"></div>
-                <div class="card card-2"><img src="https://placeholder.com" alt="Post 2"></div>
-                <div class="card card-3"><img src="https://placeholder.com" alt="Post 3"></div>
+                <div class="card card-1"><img src="https://images.unsplash.com/photo-1517849845537-4d257902454a?auto=format&fit=crop&w=300&q=80" alt="Animal 1"></div>
+                <div class="card card-2"><img src="https://images.unsplash.com/photo-1474511320723-9a56873867b5?auto=format&fit=crop&w=300&q=80" alt="Animal 2"></div>
+                <div class="card card-3"><img src="https://images.unsplash.com/photo-1456926631375-92c8ce872def?auto=format&fit=crop&w=300&q=80" alt="Animal 3"></div>
+                <div class="card card-1"><img src="https://images.unsplash.com/photo-1537151608804-ea2f1ea01594?auto=format&fit=crop&w=300&q=80" alt="Animal 4"></div>
+                <div class="card card-2"><img src="https://images.unsplash.com/photo-1543852786-1cf6624b9987?auto=format&fit=crop&w=300&q=80" alt="Animal 5"></div>
+                <div class="card card-3"><img src="https://images.unsplash.com/photo-1505628346881-b72b27e84530?auto=format&fit=crop&w=300&q=80" alt="Animal 6"></div>
             </div>
         </section>
         
-        <section class="resultado">
-            <span class="badge">Resultado</span>
-            <p>Logramos una marca profesional, coherente y visualmente sólida.</p>
+        <section id="proyectos" class="resultado">
+            <span class="badge">Proyectos Dinámicos</span>
+            <p>Contenido interactivo que se puede ocultar o mostrar.</p>
+            <button id="btn-toggle" class="btn">Ocultar Contenido</button>
+            <div id="contenido-dinamico" class="dynamic-content">
+                <p>Este es el contenido dinámico del proyecto. Aquí se pueden mostrar los detalles técnicos de los proyectos realizados en mecatrónica.</p>
+            </div>
         </section>
     </main>
 
+    <script src="script.js"></script>
 </body>
 </html>
