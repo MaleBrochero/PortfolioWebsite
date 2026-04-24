@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio - Maria Jose</title>
+    <!-- Connect CSS file here -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-brand">Maria Jose</div>
+        <button class="hamburger" id="hamburger">☰</button>
+        <ul id="nav-links">
+            <li><a href="index.html#inicio">Inicio</a></li>
+            <li><a href="index.html#perfil">Perfil</a></li>
+            <li><a href="index.html#proyectos">Proyectos</a></li>
+            <li><a href="mascotas.html">Galería de Mascotas</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section (Header) -->
+    <header id="inicio" class="hero">
+        <div class="hero-content">
+            <img src="../public/img/FotoM.webp" alt="Foto de Maria Jose" class="profile-img">
+            <h1>MARIA JOSE</h1>
+            <p>¡HOLA! SOY INGENIERA MECATRÓNICA. BIENVENIDO A MI PORTAFOLIO.</p>
+            <button id="btn-bienvenida" class="btn">Mostrar Bienvenida</button>
+        </div>
+    </header>
+
+    <!-- Information Section in Columns (Projects) -->
+    <section id="perfil" class="info-blocks">
+        <div class="block">
+            <span class="badge">Mi Contexto</span>
+            <p>Soy Ingeniera Mecatrónica con experiencia sólida en automatización, telecomunicaciones, mantenimiento
+                industrial y sistemas de control.</p>
+        </div>
+        <div class="block">
+            <span class="badge">Mi Propósito</span>
+            <p id="texto-cambiante">Me considero una persona sumamente proactiva y resiliente, siempre orientada a la
+                mejora continua y a aportar valor real.</p>
+            <button id="btn-cambiar-texto" class="btn btn-small">Ver Más</button>
+        </div>
+        <div class="block">
+            <span class="badge highlight">Mi Objetivo</span>
+            <p>Busco especializarme en el análisis y uso estratégico de datos para liderar la optimización de sistemas y
+                fomentar la innovación en procesos industriales.</p>
+        </div>
+    </section>
+
+    <!-- Formal Education Section -->
+    <section id="educacion" class="info-blocks educacion-blocks">
+        <div style="grid-column: 1 / -1; text-align: center; margin-bottom: 1rem;">
+            <h2>Educación Formal</h2>
+        </div>
+        <div class="block">
+            <h3 style="color: var(--primary-color);">Especialización en Ciencia de Datos</h3>
+            <p>Institución Universitaria de Barranquilla.</p>
+            <p><em>2025-2026 (Cursando)</em></p>
+        </div>
+        <div class="block">
+            <h3 style="color: var(--primary-color);">Ingeniería Mecatrónica</h3>
+            <p>Institución Universitaria de Barranquilla.</p>
+            <p><em>2020-2025 (Culminado)</em></p>
+        </div>
+    </section>
+
+    <!-- Gallery Section removed from here -->
+    <main class="container">
+
+        <section id="proyectos" class="resultado">
+            <span class="badge">Mis Proyectos Dinámicos</span>
+            <p>Aquí puedes explorar parte de mi trabajo e interactuar con el contenido.</p>
+            <button id="btn-toggle" class="btn">Ocultar Mis Proyectos</button>
+            <div id="contenido-dinamico" class="dynamic-content">
+                <p>En este espacio quiero mostrarte los detalles técnicos de los proyectos que he liderado y
+                    desarrollado en mecatrónica. ¡Estoy lista para aportar esta experiencia a su equipo!</p>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
